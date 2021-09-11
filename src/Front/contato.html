@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang ='pt-br'>
+<head>
+    <title> Medicator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projeto.css">
+    <link rel="stylesheet" href="contato.css">
+    <link rel="icon" href="img/logo.png"/>
+</head>
+<body>
+    <!-- menu hamburguer -->
+    
+          
+               
+<!-- Inicio do menu -->
+
+<nav class="navigation-bar">
+    <img class="logo" src="img/logo.png">
+    <a href="index.html">Home</a>
+    <a href="projeto.html">Equipe</a>
+    <a href="contato.html">Contato</a>
+    <a href=" https://www.notion.so/Documenta-o-API-8edfc00857244bedab6c0607b47f73d9">Documentação</a>
+   </nav>
+   
+                
+<!-- não mexer aqui  -->
+
+<div class="container">  
+     <!-- <form id="contact" action="https://formspree.io/f/xdoypvwz" method="POST">  -->
+         <form id="contact" action="enviaEmail.php" method="POST">  
+      <h3>Entre em contato</h3>
+      <h4>Digite sua mensagem</h4>
+      <fieldset>
+        <input placeholder="Seu nome" id="nome" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Sem endereço de email" name="_replyto" id="mensagem" type="email" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <!-- <input placeholder="Seu Telefone (opcional)" type="tel" tabindex="3" required>
+      </fieldset>
+    
+    
+  -->
+      <fieldset>
+       
+      <fieldset>
+        <textarea placeholder="Digite sua mensagem aqui..." id="msg" tabindex="5" required></textarea>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">ENVIAR</button>
+      </fieldset>
+      
+    </form>
+  </div>
+</body>
+<script> 
+  
+</script>
+
+<div class="container body-content">
+<!-- escrever algo -->
+</div>
+<footer class="fixar-rodape"> <br>
+    <p>&copy; Desenvolvido pelo time L3</p>
+</footer>
+</html>
+
+<script src ='./main.js'></script>

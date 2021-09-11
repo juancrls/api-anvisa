@@ -1,0 +1,351 @@
+/* configura o corpo do site */
+
+
+@media only screen and (max-width: 959px) {
+  p{
+      font-size: 10px;
+  }
+}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  p{
+      font-size: 12px;
+  }
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  p{
+      font-size: 14px;
+  }
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  p{
+      font-size: 9px;
+  }
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  p{
+      font-size: 7px;
+  }
+}
+
+
+
+body {
+    zoom: 90%; 
+    background-color: #d5d9df;
+    font-family: "Roboto", sans-serif;
+   }
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+
+.login-page {
+ width: 360px;
+ padding: 5% 0 0;
+ margin: auto;
+ margin-top: -20px;
+
+
+}
+
+.login-page:hover{
+ box-shadow: 0 5px 0px rgba(0,0,0,0.8);
+}
+
+/* configurações do formulario de pesquisa */
+.form {
+ /* position: ; */
+ z-index: 1;
+ background: #FFFFFF;
+ max-width: 360px;
+ margin: 0 auto 100px;
+ padding: 45px;
+ text-align: center;
+ box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+ 
+}
+
+/* Caixa de pesquisa */
+.form input {
+ font-family: "Roboto", sans-serif;
+ outline: 0;
+ background: #ffffff;
+ width: 100%;
+ border: 1px solid #ccc;
+ margin: 0 0 16px;
+ padding: 15px;
+ box-sizing: border-box;
+ font-size: 14px;
+}
+
+/* Botão de pesquisa */
+.form button {
+ font-family: "Roboto", sans-serif;
+ text-transform: uppercase;
+ outline: 0;
+ background-color: #0069d9;
+ width: 100%;
+ border: 0;
+ padding: 10px;
+ color: #FFFFFF;
+ font-size: 14px;
+ -webkit-transition: all 0.3 ease;  /*  controla a velocidade de uma animação quando há mudanças de propriedades CSS*/
+ transition: all 0.3 ease;   /*definir a transição entre dois estados de um elemento*/
+ cursor: pointer; /* controla a aparência do cursor do mouse quando estiver localizado sobre o elemento*/
+}
+
+/*efeitos no botão de enviar*/
+
+.form button:hover,.form button:active,.form button:focus {
+ background: #2c4af1;
+ background-color: #0069d9;
+ color: white;
+   box-shadow: 0 10px 20px 0 rgba(80,123,252,0.50);
+}
+
+
+.form .message {
+ margin: 15px 0 0;
+ color: #e6eff0;
+ font-size: 12px;
+
+}
+.form .message a {
+ color: #000000;
+ text-decoration: none;
+}
+.form .register-form {
+ display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    margin: 1em 2em;
+  }
+}
+
+/* posição do .container */
+
+.container {
+  position: relative;
+  z-index: 1;  /* z-indexpropriedade especifica a ordem da pilha de um elemento.*/
+  max-width: 300px; /* define a largura maxima*/
+  margin: 0 auto; /* Significa que o browser dará uma margem automática para todos os lados.*/
+}
+.container:before, .container:after {
+  content: "";
+  display: block;  /* faz com que o elemento HTML seja renderizado como bloco*/
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* Daqui pra cima tá tudo ok, Não mexer */
+
+/* footer */
+
+ div.body-content{ 
+    /** Essa margem vai evitar que o conteudo fique por baixo do rodapé **/
+     margin-bottom: 20px;
+     
+  }
+
+  /* footer */
+
+footer{
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  bottom: 0; 
+  position: fixed;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); 
+  }
+
+
+/* Encarra o footer  */
+  
+   .confirmacoes li {
+    font-size: 14px;
+    display: flex;
+}
+
+.confirmacoes input {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    position: relative;
+}
+ 
+@media only screen and (min-width: 480px){
+.navigation-bar {
+  width: 100%;  
+  height: 80px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); 
+
+  
+}
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 90px;
+  margin-top: -20px; 
+  max-height: 150px;
+  max-width: 200px;
+  width: 120px;
+  height: 120px;
+}
+.navigation-bar > a {
+display: inline-block;
+vertical-align: top;
+margin-right: 30px;
+line-height: 70px; 
+ 
+}
+.logo {
+  float: left;
+  margin-top: -8px;
+ 
+}
+
+
+/* ~~ Top Navigation Bar ~~ */
+
+#navigation-container {
+  width:100%/px;
+  margin: 0 auto;
+  height: 70px;
+}
+
+.navigation-bar {
+  background-color: #ffffff;
+   height: 70px;
+  width: 100%; 
+  width: calc(50% + 583 - 366);
+  border-radius: #000;
+}
+
+#navigation-container img {
+  float: left;
+}
+
+#navigation-container ul {
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  display:inline-block;
+}
+
+#navigation-container li {
+  list-style-type: none;
+  padding: 0px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline;
+}
+
+#navigation-container li a {
+  color: white;
+  font-size: 16px;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  line-height: 70px;
+  padding: 5px 15px;
+  opacity: 0.7;
+}
+
+#menu {
+  float: right;
+}}
+
+ a{
+  text-decoration:none;
+  color:#000;
+  }
+a:hover{
+   text-decoration:underline;
+  color:#0069d9;
+  text-transform:uppercase;
+  text-decoration: none; 
+  
+  } 
+
+
+/* daqui pra cima ta ok */
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased; /* Renderização em subpixel gera um melhor resultado em monitores atuais,*/
+  -o-font-smoothing: antialiased; /*Permita que o navegador selecione uma otimização para suavização de fonte*/
+ text-rendering: optimizeLegibility; /*otimizar a velocidade do carregamento dos textos*/
+
+}
+
+.container {
+  max-width: 370px;
+  width: 100%;
+  margin: 0 auto;  
+  /* position: relative; */
+}
+
+#result {
+  margin: 10px;
+  margin-bottom: 100px;
+}
+
+/* Jhoyce config  */
+
+table,th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  /* padding: 5px; */
+} 
+
+th {
+  width: 10px;
+  text-align: left;
+}
+
+thead {
+  color: white;
+} 
+
+
+   
+ 
+  

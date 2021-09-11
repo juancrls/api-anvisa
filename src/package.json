@@ -1,0 +1,29 @@
+{
+  "type": "module",
+  "name": "api-medicator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon --max-old-space-size=4096 lib\\API",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.1.0",
+    "@koa/router": "^10.0.0",
+    "csv": "^5.5.0",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.12",
+    "selenium-webdriver": "^4.0.0-beta.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "jest": "^27.0.6"
+  }
+}

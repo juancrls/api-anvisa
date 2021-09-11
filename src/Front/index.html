@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang ='pt-br'>
+<head>
+    <title> Medicator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="imagex/png" href="/img/logo.png">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.0/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.0/js/dataTables.jqueryui.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.0/css/dataTables.jqueryui.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  
+    <title>Medicator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="projeto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.png"/>
+
+
+</head>
+<body>
+<!-- menu hamburguer -->
+<!-- acrescentar o menu hamburguer -->
+                     
+<!-- Inicio do menu -->
+
+<nav class="navigation-bar">
+    <img class="logo" src="img/logo.png">
+    <a href="index.html">Home</a>
+    <a href="projeto.html">Equipe</a>
+    <a href="contato.html">Contato</a>
+    <a href=" https://www.notion.so/Documenta-o-API-8edfc00857244bedab6c0607b47f73d9">Documentação</a>
+    
+    </nav> 
+
+<!-- não mexer aqui  -->
+
+    <div class='login-page'>
+        <div class='form' ng-app="dmExemploApp">
+            <h3>Consulte o seu medicamento </h3> <br>
+            
+            <div>
+                <!-- codigo de barras -->
+                <ul class="confirmacoes">
+                    <li> 
+                <label for='Barras'>
+                    <input type='radio'  class="label-input" name='rdo' id='barras'>
+                    <span class='label'></span> Código de Barras 
+                </label> 
+            </li>
+            <li>  
+                <!-- nome do produto -->
+                <label for='nome' class="label-input"> 
+                    <input type='radio' name='rdo' id='nome'> 
+                    <span class='checkmark'></span> Nome do Produto 
+                </label>
+            </li>
+            
+            <li> 
+                 <label for='nome' class="label-input">
+                    <input type='radio'  name='rdo' id='subs'> 
+                    <span class='checkmark'></span> Príncipio Ativo
+                    
+                </label> 
+            </li>
+
+                     <!-- Código do GGREM -->
+        
+            <li> 
+                <label for='nome' class="label-input" id="last-label-input">
+                   <input type='radio'  name='rdo' id='ggrem'> 
+                   <span class='checkmark'></span> Código GGREM
+                   
+               </label> 
+           </li>
+            </ul>  
+              <!-- Input + botão de Enviar -->
+              <div class="fake-input">                    
+<input id="icon" type='text'  placeholder='Busque pelo site...'   autofocus="true" id='search' name='search' /> 
+<!-- <img src="img/pngwing.com.png" width=25px /> -->
+</div>
+            <i class="fas fa-lock icon-modify"></i><br>
+            <button type='submit'  class="btn btn-second">Pesquisar</button>
+        </div ng-controller="ctrlExemplo">
+    </div>   
+</form>
+</div>
+
+<div id="result">
+
+</div>
+
+</body>
+<div class="container body-content">
+<!-- escrever algo --> 
+
+</div>
+<footer class="fixar-rodape"> <br>
+    <p>&copy; Desenvolvido pelo time L3 </p>
+</footer>
+</html>
+
+  <script>
+  $(".btn").click(async function(){
+    let checker = await local(document.getElementById('icon').value);
+    checker == true ?
+    $("#table_id").DataTable({
+        scrollY: 300,
+        "stripeClasses": [],
+        "language": {
+            "lengthMenu": "Mostrar _MENU_ linhas por página",
+            "zeroRecords": "Nenhum resultado encontrado",
+            "info": "Mostrando _PAGE_ de _PAGES_ páginas",
+            "infoEmpty": "Páginas não encontradas",
+            "infoFiltered": "(Filtrado de _MAX_ total linhas)",
+            "search":"Procurar:",
+            "paginate": {
+                "first":      "Primeiro",
+                "last":       "Último",
+                "next":       "Próximo",
+                "previous":   "Anterior"
+            },
+        }
+    }): null;
+  })
+  </script> <!-- JQUERY DATA TABLE -->
+
+<script>
+
+</script>
+
+<script src ='main.js'></script>
+
