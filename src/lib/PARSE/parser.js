@@ -73,6 +73,8 @@ fs.createReadStream(file)
     })
     .on('end',function() {
         csvData.shift();
-        fs.writeFile('../API/DADOS.json', JSON.stringify(csvData), err => console.log(err));
+        fs.writeFile('../API/DADOS.json', JSON.stringify(csvData), err => {
+            if(err) console.log(err)
+        });
         console.log(csvData[0])
     });

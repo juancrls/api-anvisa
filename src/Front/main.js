@@ -1,3 +1,4 @@
+const PORT = 3000;
 const local = async (input) => {
     let id = 0
     if(nome.checked){
@@ -8,7 +9,7 @@ const local = async (input) => {
         } else {
             try {
                 // mudar rota de acordo com o arquivo que tiver testando
-                let response = await fetch("http://localhost:3001/get_by_productName?name=" + input).then(body => body.json());
+                let response = await fetch(`http://localhost:${PORT}/get_by_productName?name=` + input).then(body => body.json());
                 console.log(response)
                 createTableFromJSON(response);
                 id = 1
@@ -24,7 +25,7 @@ const local = async (input) => {
         } else {
             try {
                 // mudar rota de acordo com o arquivo que tiver testando
-                let response = await fetch("http://localhost:3001/get_by_bar_code?code=" + input).then(body => body.json());
+                let response = await fetch(`http://localhost:${PORT}/get_by_bar_code?code=` + input).then(body => body.json());
                 createTableFromJSON(response);
                 id = 1
             } catch (error) {
@@ -39,7 +40,7 @@ const local = async (input) => {
         } else {
             try {
                 // mudar rota de acordo com o arquivo que tiver testando
-                let response = await fetch("http://localhost:3001/get_by_active?subs=" + input).then(body => body.json());
+                let response = await fetch(`http://localhost:${PORT}/get_by_active?subs=` + input).then(body => body.json());
                 createTableFromJSON(response);
                 id = 1
             } catch (error) {
@@ -54,7 +55,7 @@ const local = async (input) => {
         } else {
             try {
                 // mudar rota de acordo com o arquivo que tiver testando
-                let response = await fetch("http://localhost:3001/get_by_ggrem?ggrem=" + input).then(body => body.json());
+                let response = await fetch(`http://localhost:${PORT}/get_by_ggrem?ggrem=` + input).then(body => body.json());
                 createTableFromJSON(response);
                 id = 1
             } catch (error) {

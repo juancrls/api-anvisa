@@ -1,7 +1,7 @@
 import { Builder } from 'selenium-webdriver';
 import chrome from 'selenium-webdriver/chrome.js';
 let downloadFolder = `${process.cwd()}`
-const filename = 'TA_PRECO_MEDICAMENTO_GOV.csv'
+const filename = 'TA_PRECO_MEDICAMENTO.csv'
 
 console.log(downloadFolder)
 
