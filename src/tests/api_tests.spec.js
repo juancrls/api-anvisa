@@ -1,5 +1,5 @@
 // import { PORT } from '../lib/API/index';
-const PORT = 3000;
+const PORT = 3000; 
 import fetch from 'node-fetch';
 
 const badRequest = (message = "Invalid syntax for this request was provided.") => {
