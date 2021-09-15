@@ -1,4 +1,5 @@
 // import { PORT } from '../lib/API/index';
+const PORT = 3000;
 import fetch from 'node-fetch';
 
 const badRequest = (message = "Invalid syntax for this request was provided.") => {
@@ -46,22 +47,24 @@ const runTests = (okArray, notFoundArray, getName, queryStringKey) => {
     ];
 
     describe(`${getName} Request test`, () => {
+        let fetchUrl = async (inputTest) => await fetch(`http://localhost:${PORT}/${getName}?${queryStringKey}=${inputTest}`);
+
         for(let variation = 0; variation < requestVariations.length; variation++) {
 
             if(variation == 0){
                 for(let input of requestVariations[variation]){
                     test(`Return 200 as status with the input '${input}'`, async () => {
-    
-                        const res = await fetch(`http://localhost:3000/${getName}?${queryStringKey}=${input}`);
+                        const res = await fetchUrl(input)
                         expect(res.status).toEqual(200);
+
                     })
                 }
             } else if(variation == 1){
                 for(let input of requestVariations[variation][0]){
                     test(`Return a Bad Request error and 400 as status with the input '${input}'`, async () => {
-                        const res = await fetch(`http://localhost:3000/${getName}?${queryStringKey}=${input}`);
+                        const res = await fetchUrl(input)
                         const json = await res.json();
-
+                        
                         expect(json).toEqual(badRequest());
                         expect(res.status).toEqual(400);
                     })
@@ -69,9 +72,9 @@ const runTests = (okArray, notFoundArray, getName, queryStringKey) => {
 
                 for(let input of requestVariations[variation][1]){ // trocar [1] por 'blank space', usando um obj no lugar de arr no requestVariations
                     test(`Return a Bad Request error (with blank space message) and 400 as status with the input '${input}'`, async () => {
-                        const res = await fetch(`http://localhost:3000/${getName}?${queryStringKey}=${input}`);
+                        const res = await fetchUrl(input)
                         const json = await res.json();
-
+                        
                         expect(json).toEqual(badRequest('The input you provided is a blank space.'));
                         expect(res.status).toEqual(400);
                     })
@@ -80,9 +83,9 @@ const runTests = (okArray, notFoundArray, getName, queryStringKey) => {
                 for(let input of requestVariations[variation]){
                     test(`Return a Not Found error and 404 as status with the input '${input}'`, async () => {
     
-                        const res = await fetch(`http://localhost:3000/${getName}?${queryStringKey}=${input}`);
+                        const res = await fetchUrl(input)
                         const json = await res.json();
-
+                        
                         expect(res.status).toEqual(404);
                         expect(json).toEqual(notFound());
                     })
