@@ -1,6 +1,6 @@
 import createServer from "./Config/server.js"
 
-export const PORT = 3000;
+export const PORT = 3001;
 
 createServer().then(app => {
     app.listen(PORT);

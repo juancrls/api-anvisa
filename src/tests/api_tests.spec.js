@@ -1,5 +1,5 @@
 // import { PORT } from '../lib/API/index';
-const PORT = 3000; 
+const PORT = 3001; 
 import fetch from 'node-fetch';
 
 const badRequest = (message = "Invalid syntax for this request was provided.") => {
@@ -82,7 +82,6 @@ const runTests = (okArray, notFoundArray, getName, queryStringKey) => {
             } else {
                 for(let input of requestVariations[variation]){
                     test(`Return a Not Found error and 404 as status with the input '${input}'`, async () => {
-    
                         const res = await fetchUrl(input)
                         const json = await res.json();
                         
@@ -100,7 +99,7 @@ const testParameters = {
         validQueries: [
             'aciclovir',
             'AcIcLoViR',
-            ' aciclovir',
+            ' sódico',
             '500mg',
         ],
         notFoundQueries: [

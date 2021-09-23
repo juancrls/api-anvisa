@@ -4,10 +4,6 @@ import Controller from "./controllers.js"
 const routes = new Router({});
 const controller = new Controller();
 
-// const checkRoute = async (ctx) => {
-
-// }
-
 routes.get('/get_by_productName', async (ctx, next) => {
     await controller.getByProductName(ctx);
 })

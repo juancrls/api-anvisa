@@ -1,4 +1,4 @@
-const PORT = 3000;
+const PORT = 3001;
 const local = async (input) => {
     let id = 0
     if(nome.checked){

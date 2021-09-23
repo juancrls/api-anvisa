@@ -43,12 +43,12 @@ export default class Controller {
         if(!ctx.query.name) return ctx.redirect(`http://localhost:${PORT}`);
         ctx.query.name = this.normalizer(ctx.query.name);
 
-        if(ctx.query.name.length == 0){
+        if(ctx.query.name.length == 0) {
             ctx.status = 400;
             return this.badRequest(ctx, 'The input you provided is a blank space.')
         }
 
-        if(!/[^a-zA-Z0-9\s]+/g.test(ctx.query.name) || /\d+%/g.test(ctx.query.name)){
+        if(!/[^a-zA-Z0-9\s]+/g.test(ctx.query.name) || /\d+%/g.test(ctx.query.name)) {
             ctx.query.name = ctx.query.name.toUpperCase();
         } else {
             return this.badRequest(ctx)
@@ -69,12 +69,12 @@ export default class Controller {
         if(!ctx.query.subs) return ctx.redirect(`http://localhost:${PORT}`);
         ctx.query.subs = this.normalizer(ctx.query.subs);
 
-        if(ctx.query.subs.length == 0){
+        if(ctx.query.subs.length == 0) {
             ctx.status = 400;
             return this.badRequest(ctx, 'The input you provided is a blank space.')
         }
 
-        if(!/[^a-zA-Z0-9\s]+/g.test(ctx.query.subs) || /\d+%/g.test(ctx.query.subs)){
+        if(!/[^a-zA-Z0-9\s]+/g.test(ctx.query.subs) || /\d+%/g.test(ctx.query.subs)) {
             ctx.query.subs = ctx.query.subs.toUpperCase();
         } else {
             return this.badRequest(ctx)
@@ -95,12 +95,12 @@ export default class Controller {
         if(!ctx.query.code) return ctx.redirect(`http://localhost:${PORT}`);
         ctx.query.code = ctx.query.code.replace(/⠀/g, '').trim()
 
-        if(ctx.query.code.length == 0){
+        if(ctx.query.code.length == 0) {
             ctx.status = 400;
             return this.badRequest(ctx, 'The input you provided is a blank space.')
         }
 
-        if(!/^\d+$/g.test(ctx.query.code)){
+        if(!/^\d+$/g.test(ctx.query.code)) {
            return this.badRequest(ctx)
         }
         
@@ -121,12 +121,12 @@ export default class Controller {
         if(!ctx.query.ggrem) return ctx.redirect(`http://localhost:${PORT}`);
         if(ctx.query.ggrem) ctx.query.ggrem = ctx.query.ggrem.replace(/⠀/g, '').trim()
 
-        if(ctx.query.ggrem.length == 0){
+        if(ctx.query.ggrem.length == 0) {
             ctx.status = 400;
             return this.badRequest(ctx, 'The input you provided is a blank space.')
         }
 
-        if(!/^\d+$/g.test(ctx.query.ggrem)){
+        if(!/^\d+$/g.test(ctx.query.ggrem)) {
            return this.badRequest(ctx)
         }
 
